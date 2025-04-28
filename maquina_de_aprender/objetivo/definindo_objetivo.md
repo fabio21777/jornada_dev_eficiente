@@ -24,3 +24,14 @@ A teoria da autoeficácia sugere que as pessoas são mais propensas a se envolve
 * Observação de outros - busca inspiração
 * Persuasão social
 * feedback positivo - autoeficácia
+
+
+## Especificidade do objetivo
+
+1 . quero ser capaz de desenvolver e deployar api's de cadastro simples utilizando java para web. Estilo cadastro de clientes, produtos, etc
+
+
+2 - quero ser capaz de explicar como funcionar um frontend moderno, como o react, e como ele se comunica com uma api rest. Quero ser capaz de explicar o que é um frontend moderno e como ele se comunica com uma api rest.
+
+
+3 - quero ser capaz de construir um sistema eleiçoes online utilizando blockchain.
