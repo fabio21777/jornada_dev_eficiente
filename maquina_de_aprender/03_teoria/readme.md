@@ -20,3 +20,19 @@ As fontes de conhecimento são essenciais para o aprendizado, pois fornecem a ba
 | Podcast de Albert Bandura | 5 | 5 |
 | Post de blog com Albert Bandura | 5 | 4 |
 | Vídeo de Albert Bandura | 5 | 4 |
+
+
+## Seleção de fontes
+
+## Exemplo tabela de fontes para spring mvc
+
+| Fonte | Nível de confiabilidade | Nível de facilidade no consumo |
+|-------|-------------------------|--------------------------------|
+| Documentação oficial spring | 4 | 4 |
+| Codigo fonte spring | 5 | 1 |
+| Cursos online com commiters do spring mvc  | 4 | 3 |
+| blog baeldung - bom ponto de partida | 3 | 5 |
+| cursos online aleatorios  | 1 | 5 |
+
+
+
