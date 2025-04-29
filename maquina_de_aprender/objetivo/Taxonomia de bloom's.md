@@ -47,3 +47,9 @@ A Taxonomia de Bloom classifica objetivos educacionais em seis níveis cognitivo
 - **Conceitual:** Programação orientada a objetos, encapsulamento, polimorfismo
 - **Procedural:** Métodos para implementar interfaces, uso de design patterns
 - **Metacognitivo:** Estratégias para debugging, refatoração e otimização de código
+
+
+Referências:
+
+- https://www.coloradocollege.edu/other/assessment/how-to-assess-learning/learning-outcomes/blooms-revised-taxonomy.html
+-
