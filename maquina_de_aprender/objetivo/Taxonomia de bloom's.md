@@ -52,4 +52,3 @@ A Taxonomia de Bloom classifica objetivos educacionais em seis níveis cognitivo
 Referências:
 
 - https://www.coloradocollege.edu/other/assessment/how-to-assess-learning/learning-outcomes/blooms-revised-taxonomy.html
--
