@@ -89,4 +89,8 @@ DTOs (Data Transfer Objects) são objetos que transportam dados entre processos.
 Uma reflexão válida é a adição de métodos nos DTOs. Em alguns casos, isso pode fazer sentido, como, por exemplo, passar o `EntityManager` como parâmetro para buscar uma entidade específica, em vez de criar um novo serviço apenas para essa função. No entanto, essa abordagem deve ser usada dependendo do contexto e da complexidade do sistema.
 
 
-## Preciso de um monte de camadas
+## Preciso de um monte de camadas (arquiteturas em camadas)?
+
+A arquitetura em camadas é uma abordagem comum no desenvolvimento de software, onde o sistema é dividido em camadas distintas, cada uma com sua própria responsabilidade. O core da aplicação fica "protegido e desacoplado" de outras partes do sistema.
+
+Apesar de ser uma abordagem com suas vantagens, normalmente o custo para manter e codificar é maior, e o tempo de desenvolvimento também aumenta. Embora seja uma estratégia válida, é importante sempre avaliar o contexto e verificar se os trade-offs são adequados para o problema em questão.
