@@ -1,3 +1,4 @@
+# [Volta](readme.md)
 ## Teoria da Carga Cognitiva
 
 A teoria da carga cognitiva é um conceito desenvolvido por John Sweller na década de 1980. Ela se concentra em como a carga cognitiva afeta o aprendizado e a retenção de informações. A carga cognitiva refere-se à quantidade de esforço mental que uma pessoa deve empregar para processar informações durante o aprendizado.

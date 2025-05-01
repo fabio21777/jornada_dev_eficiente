@@ -1,3 +1,5 @@
+# [volta](../readme.md)
+
 # definindo bom objetivo
 
 Ter um objetivo é melhor do que não ter
@@ -10,6 +12,11 @@ Exemplos de objetivos ruins:
 * Aprender blockchain
 * Apreder andar de skate
 * Aprender a tocar violão
+
+
+## Taxonomia de Bloom
+
+[Taxonomia de Blom](Taxonomia%20de%20bloom's.md)
 
 ## Para definir um bom objetivo, devemos definir oque seremos capazes de fazer com o conhecimento adquirido.
 

@@ -1,6 +1,12 @@
+# [volta](../readme.md)
+
 # A importância da teoria
 
 As fontes de conhecimento são essenciais para o aprendizado, pois fornecem a base teórica necessária para entender os conceitos e práticas de uma determinada área. A teoria ajuda a construir um entendimento sólido e profundo, permitindo que os alunos façam conexões entre diferentes tópicos e apliquem o conhecimento de maneira eficaz.
+
+## Teoria da Carga Cognitiva
+
+[Teoria da carga Cognitiva](teoria_carga_cognitiva.md)
 
 ## Nível de confiabilidade
 

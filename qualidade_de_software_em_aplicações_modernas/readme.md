@@ -61,3 +61,21 @@ Escrever uma história no formato para o programador é importante para tangibil
 ## Design de código
 
 São decisões e definições que tomamos no dia a dia na escrita do código. São as pequenas decisões no momento da codificação, com o objetivo de criar um código que seja fácil de entender e manter. O design de código é uma parte importante do desenvolvimento de software, pois ajuda a garantir que o código seja legível, reutilizável e fácil de modificar.
+
+
+## CDD
+
+[Minhas notas cdd](./cdd.md)
+
+
+
+
+## Modificação pode ser mais fácil que extensão
+
+é um principio do solid o 'O', que diz o seguinte:
+> "Um módulo deve ser fechado para modificação, mas aberto para extensão". Isso significa que devemos evitar modificar o código existente, mas podemos estender o código existente para adicionar novas funcionalidades. Isso ajuda a garantir que o código existente permaneça estável e não seja afetado por mudanças futuras.
+>
+
+Normalmente as modificações são mais fácieis do que extensões, criar abtroçoes generalistas demais podem aumentar a a complexidade do código sem adicionar fluidez na codigificação, apesar de ser um principio importante, o O do SOLID, com oqualquer outro princípio, deve ser aplicado conforme a necessidade e contexto do prolema.
+
+

@@ -1,7 +1,12 @@
+# [volta](../readme.md)
+
 # Prática
 
 Praticar é descrever, explicarar e aplicar o conhecimento adquirido. A prática é fundamental para a retenção do conhecimento e para a aplicação em situações reais. A pratica é para atigir o objetivo definido do objetivo.
 
+## Plano de aprendizagem
+
+[Plano de aprendizagem](Plano_Aprendizagem.md)
 
 ## Prática prioritaria
 

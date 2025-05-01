@@ -6,6 +6,24 @@
 
 3. O codigo é a etappa final de concepção daquilo que deve ser feito. O código é a implementação do que foi definido nas etapas anteriores. O código é a representação final do que foi planejado e discutido nas etapas anteriores.
 
+## Requisitos Funcionais e Não Funcionais
+
+[Requisitos Funcionais e Não Funcionais](./requisito.md)
+
+##  Passos práticos para refinar um requisito
+
+
+[Passos práticos para refinar um requisito](./refinando_requisito.md)
+
+
+## Shape up
+
+[Shape up](./shape_up.md)
+
+## Template de requisitos
+
+[Template de requisitos](./template-requisito.md)
+
 
 ## Referência bibliográfica
 

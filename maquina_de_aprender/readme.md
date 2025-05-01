@@ -7,6 +7,7 @@
 * feedback - ajuste de rota, errar rápido
 
 
+
 A lei de Parkinson é um epigrama formulado pelo escritor britânico Cyril Northcote Parkinson que diz que "o trabalho se expande de modo a preencher o tempo disponível para a sua realização. Quanto mais tempo, mais importante e exigente o trabalho parece.
 
 ## Sabotadores do aprendizado
@@ -21,3 +22,25 @@ A lei de Parkinson é um epigrama formulado pelo escritor britânico Cyril North
 1. Constância
 2. Rotina
 3. deadline
+
+
+## Objetivo
+
+[objetivo](01_objetivo/readme.md)
+
+## Alinhamento de expectativas
+
+[alinhamento](02_alinhamento_expectativa/readme.md)
+
+
+## Teoria
+
+[teoria](03_teoria/readme.md)
+
+## Prática
+
+[pratica](04_pratica/readme.md)
+
+## Feedback
+
+[feedback](05_feedback/readme.md)
