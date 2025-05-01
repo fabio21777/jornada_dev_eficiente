@@ -78,4 +78,8 @@ São decisões e definições que tomamos no dia a dia na escrita do código. S�
 
 Normalmente as modificações são mais fácieis do que extensões, criar abtroçoes generalistas demais podem aumentar a a complexidade do código sem adicionar fluidez na codigificação, apesar de ser um principio importante, o O do SOLID, com oqualquer outro princípio, deve ser aplicado conforme a necessidade e contexto do prolema.
 
+## Acoplamento com o framework
+
+Os frameworks mais modernos, como Spring Boot, Quarkus e Micronaut, normalmente geram pouco acoplamento, e o nível de código geralmente ocorre apenas via metadados (anotações), o que facilita a migração. Aqui pode ser levado em consideração um tradeoff importante: o quanto de facilidade de codificação e manutenção será obtido ao se acoplar ao framework, e o quanto de acoplamento será gerado. O ideal é que o acoplamento seja o menor possível, mas isso pode gerar um aumento na complexidade do código, dificultando a manutenção e a codificação.
+
 
