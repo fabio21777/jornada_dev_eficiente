@@ -94,3 +94,12 @@ Uma reflexão válida é a adição de métodos nos DTOs. Em alguns casos, isso 
 A arquitetura em camadas é uma abordagem comum no desenvolvimento de software, onde o sistema é dividido em camadas distintas, cada uma com sua própria responsabilidade. O core da aplicação fica "protegido e desacoplado" de outras partes do sistema.
 
 Apesar de ser uma abordagem com suas vantagens, normalmente o custo para manter e codificar é maior, e o tempo de desenvolvimento também aumenta. Embora seja uma estratégia válida, é importante sempre avaliar o contexto e verificar se os trade-offs são adequados para o problema em questão.
+
+## Acoplamento mental
+
+O acoplamento mental ocorre devido a decisões de código normalmente influenciadas por bibliotecas ou frameworks que seguem determinados padrões. Um exemplo disso foi uma busca específica no Elasticsearch, onde a consulta era construída concatenando strings separadas por espaços e, posteriormente, realizando um split nesses espaços para obter os atributos corretamente.
+
+Esse tipo de acoplamento mental exige que a pessoa que está mantendo ou evoluindo o código leia e compreenda detalhadamente o que está acontecendo. Isso pode ser um problema se a pessoa não estiver familiarizada com a biblioteca ou framework utilizado, levando a erros e dificuldades na manutenção do código.
+
+Para evitar esse tipo de acoplamento, é importante adotar práticas que tornem o código mais claro e menos dependente de detalhes específicos de implementação.
+
