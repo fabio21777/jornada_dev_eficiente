@@ -82,4 +82,11 @@ Normalmente as modificações são mais fácieis do que extensões, criar abtro�
 
 Os frameworks mais modernos, como Spring Boot, Quarkus e Micronaut, normalmente geram pouco acoplamento, e o nível de código geralmente ocorre apenas via metadados (anotações), o que facilita a migração. Aqui pode ser levado em consideração um tradeoff importante: o quanto de facilidade de codificação e manutenção será obtido ao se acoplar ao framework, e o quanto de acoplamento será gerado. O ideal é que o acoplamento seja o menor possível, mas isso pode gerar um aumento na complexidade do código, dificultando a manutenção e a codificação.
 
+## DTOs com métodos
 
+DTOs (Data Transfer Objects) são objetos que transportam dados entre processos. Eles são usados para transferir dados entre a camada de apresentação e a camada de serviço, ou entre a camada de serviço e a camada de persistência. Os DTOs ajudam a evitar o acoplamento entre as camadas e garantem que os dados sejam transferidos de forma eficiente.
+
+Uma reflexão válida é a adição de métodos nos DTOs. Em alguns casos, isso pode fazer sentido, como, por exemplo, passar o `EntityManager` como parâmetro para buscar uma entidade específica, em vez de criar um novo serviço apenas para essa função. No entanto, essa abordagem deve ser usada dependendo do contexto e da complexidade do sistema.
+
+
+## Preciso de um monte de camadas
