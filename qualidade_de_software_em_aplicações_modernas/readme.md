@@ -103,3 +103,7 @@ Esse tipo de acoplamento mental exige que a pessoa que está mantendo ou evoluin
 
 Para evitar esse tipo de acoplamento, é importante adotar práticas que tornem o código mais claro e menos dependente de detalhes específicos de implementação.
 
+## Abrace o lagado
+
+O legado é uma parte importante do desenvolvimento de software, e muitas vezes é necessário lidar com sistemas legados que não foram projetados com as melhores práticas em mente. Em vez de tentar reescrever todo o sistema legado, o ideal é entender como ele funciona e como pode ser melhorado.
+
