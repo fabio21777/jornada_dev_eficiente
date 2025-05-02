@@ -1,19 +1,25 @@
-# [voltar](readme.md)
+# [Voltar](readme.md)
 
-## guidelines
+## Guidelines
 
-Criar código de facil manunteção e facil evolução deve anteceder qualquer principio, prática ou designer, deve ser uma preocupação.Uma forma de fazer isso é criar guidelines, que são diretrizes que ajudam a orientar o desenvolvimento de software. Essas diretrizes podem incluir práticas recomendadas, padrões de codificação e princípios de design que devem ser seguidos durante o desenvolvimento.
-
+Criar código de fácil manutenção e fácil evolução deve anteceder qualquer princípio, prática ou design. Essa deve ser uma preocupação central no desenvolvimento de software. Uma forma de alcançar isso é criar guidelines, que são diretrizes que ajudam a orientar o desenvolvimento de software. Essas diretrizes podem incluir práticas recomendadas, padrões de codificação e princípios de design que devem ser seguidos durante o desenvolvimento.
 
 ## Guidelines CDD
 
 [CDD](guideLineCdd.md)
 
-## Guidelines Testes
+## Guidelines de Testes
 
-[TESTES](guideLineTeste.md)
+[Testes](guideLineTeste.md)
 
+## Guidelines de Log
 
-## Guidelines de logar
+[Log](guideLineLogar.md)
 
-[LOGAR](guideLineLogar.md)
+## Guidelines de Coesão
+
+[Coesão](guideLineCoesao.md)
+
+## Guidelines de Generalização e Reuso de Código
+
+[Generalização e Reuso](guideLineGeneralizacao.md)
