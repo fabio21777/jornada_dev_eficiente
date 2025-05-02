@@ -113,8 +113,5 @@ O legado é uma parte importante do desenvolvimento de software, e muitas vezes 
 2. Aumenta a quantidade de código a ser mantido.
 3. Melhora a confiança da equipe, pois valida futuras correções, evoluções e refatorações na base de código.
 
-## guidelines
-
-Criar código de facil manunteção e facil evolução deve anteceder qualquer principio, prática ou designer, deve ser uma preocupação.Uma forma de fazer isso é criar guidelines, que são diretrizes que ajudam a orientar o desenvolvimento de software. Essas diretrizes podem incluir práticas recomendadas, padrões de codificação e princípios de design que devem ser seguidos durante o desenvolvimento.
 
 
