@@ -12,3 +12,8 @@ Criar código de facil manunteção e facil evolução deve anteceder qualquer p
 ## Guidelines Testes
 
 [TESTES](guideLineTeste.md)
+
+
+## Guidelines de logar
+
+[LOGAR](guideLineLogar.md)
