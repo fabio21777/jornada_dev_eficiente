@@ -21,6 +21,25 @@ A prioridade máxima é funcionar de acordo com o caso de uso.
 Execute o seu código o mais rápido possível. Priorize implementar de fora para dentro, dessa forma você visualiza o que realmente precisa e utiliza uma abordagem mais incremental. O "fora" aqui pode ser o endpoint que vai receber uma chamada ou até mesmo um teste automatizado.
 
 ```java
+
+public class NovoConviteRequest {
+	@NotBlank
+	@Email
+	private String email;
+	@min(1)
+	@NotNull
+	private Integer diasExpiracao;
+
+	public NovoConviteRequest(String email, int diasExpiracao) {
+		this.email = email;
+		this.diasExpiracao = diasExpiracao;
+	}
+
+	public Convite toModel(Conta conta) {
+		return new Convite(this.email, this.diasExpiracao, conta);
+	}
+}
+
 @RestController
 public class GeraNovoConviteController {
     /**
@@ -51,7 +70,7 @@ public class GeraNovoConviteController {
 	}
 
 	@PostMapping("/api/contas/{idConta}/convites")
-	public void exexuta(@PathVariable Long idConta,@RequestHeader("id-pessoa-logada") , @RequestBody NovoConviteRequest request) {
+	public void exexuta(@PathVariable Long idConta,@RequestHeader("id-pessoa-logada") , @valid @RequestBody NovoConviteRequest request) {
 		System.out.println("idConta: " + idConta);
 		System.out.println("idPessoaLogada: " + idPessoaLogada);
 		System.out.println("NovoConviteRequest: " + request);
@@ -82,3 +101,10 @@ public class GeraNovoConviteController {
 }
 
 ```
+
+## proteger as bordas do sistema
+
+
+- Proteja as bordas do sistema, ou seja, proteja o que entra e o que sai do sistema. Isso inclui validar os dados de entrada e saída, garantir que os dados estejam no formato correto e que não haja dados inválidos ou maliciosos.
+
+
