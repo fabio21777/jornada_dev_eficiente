@@ -114,4 +114,8 @@ O legado é uma parte importante do desenvolvimento de software, e muitas vezes 
 3. Melhora a confiança da equipe, pois valida futuras correções, evoluções e refatorações na base de código.
 
 
+## GuideLine de complexidade de código
+
+[GuideLine de complexidade de código](guideline.md)
+
 
