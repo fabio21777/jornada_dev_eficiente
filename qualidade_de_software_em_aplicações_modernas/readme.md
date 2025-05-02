@@ -107,3 +107,8 @@ Para evitar esse tipo de acoplamento, é importante adotar práticas que tornem 
 
 O legado é uma parte importante do desenvolvimento de software, e muitas vezes é necessário lidar com sistemas legados que não foram projetados com as melhores práticas em mente. Em vez de tentar reescrever todo o sistema legado, o ideal é entender como ele funciona e como pode ser melhorado.
 
+## Bateria de testes automatizados
+
+1. Aumenta a confiabilidade do código.
+2. Aumenta a quantidade de código a ser mantido.
+3. Melhora a confiança da equipe, pois valida futuras correções, evoluções e refatorações na base de código.
