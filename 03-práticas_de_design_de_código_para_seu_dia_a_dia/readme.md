@@ -356,3 +356,36 @@ public class GeraNovoConviteController {
 }
 }
 ```
+
+### Derive testes de maneira sistemática
+
+Testes automatizados devem ser derivados de maneira pragmática utilizando técnicas já conhecidas. Após cobrir os casos padrão, podemos usar nossa criatividade para extrapolar e testar cenários adicionais, garantindo maior robustez e confiabilidade no sistema.
+
+```java
+
+public class EmployeeBonus {
+    public double calculateBonus(double salary, int yearsWorked, boolean hasMetTarget) {
+        if (yearsWorked > 10 && hasMetTarget) {
+            return salary * 0.15; // 15% bonus
+        } else if (yearsWorked > 5 && hasMetTarget) {
+            return salary * 0.10; // 10% bonus
+        } else if (yearsWorked > 5 || hasMetTarget) {
+            return salary * 0.05; // 5% bonus
+        } else {
+            return 0.0; // No bonus
+        }
+    }
+}
+
+
+```
+
+#### Casos de Teste - EmployeeBonus
+
+1. **Bônus 15%:** Anos > 10 E metas=SIM → Salário 2000, 12 anos, metas=SIM → Resultado: 300
+2. **Bônus 10%:** Anos > 5 E metas=SIM → Salário 2000, 7 anos, metas=SIM → Resultado: 200
+3. **Bônus 5% (tempo):** Anos > 5 E metas=NÃO → Salário 2000, 8 anos, metas=NÃO → Resultado: 100
+4. **Bônus 5% (meta):** Anos < 5 E metas=SIM → Salário 2000, 3 anos, metas=SIM → Resultado: 100
+5. **Sem Bônus:** Anos < 5 E metas=NÃO → Salário 2000, 2 anos, metas=NÃO → Resultado: 0
+6. **Fronteira - 5 Anos:** Anos = 5 E metas=NÃO → Salário 2000, 5 anos, metas=NÃO → Resultado: 0
+7. **Fronteira - 10 Anos:** Anos = 10 E metas=SIM → Salário 2000, 10 anos, metas=SIM → Resultado: 200
