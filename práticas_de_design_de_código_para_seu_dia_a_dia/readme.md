@@ -127,3 +127,32 @@ private Conta findById(Long id) {
 Separamos as bordas externas do sistema do seu núcleo. Não conectamos diretamente os parâmetros de requisição externa com objetos de domínio, assim como não serializamos objetos de domínio para resposta da API. Essa separação ajuda a manter o núcleo do sistema desacoplado e mais seguro.
 
 
+### Informação obrigatória entra pelo construtor
+
+Usamos o contrutor para criar o objeto no estado valido.Como no exemplo abaixo, o construtor é usado para criar o objeto `NovoConviteRequest` com os dados obrigatórios. Isso garante que o objeto sempre estará em um estado válido quando for criado, sem criar os métodos `set` para cada atributo.
+
+```java
+public class NovoConviteRequest {
+	@NotBlank
+	@Email
+	private String email;
+	@min(1)
+	@NotNull
+	private Integer diasExpiracao;
+
+	public NovoConviteRequest(String email, int diasExpiracao) { // Construtor
+		this.email = email;
+		this.diasExpiracao = diasExpiracao;
+	}
+
+	//novo construtor apenas com o email
+	public NovoConviteRequest(String email) {
+		this.email = email;
+	}
+
+	public Convite toModel(Conta conta) {
+		return new Convite(this.email, this.diasExpiracao, conta);
+	}
+}
+```
+
