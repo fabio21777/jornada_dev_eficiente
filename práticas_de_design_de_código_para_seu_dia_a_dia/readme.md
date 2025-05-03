@@ -102,9 +102,28 @@ public class GeraNovoConviteController {
 
 ```
 
-## proteger as bordas do sistema
+### Proteger as bordas do sistema
 
+- Proteja as bordas do sistema, ou seja, valide o que entra e o que sai do sistema. Isso inclui validar os dados de entrada e saída, garantindo que os dados estejam no formato correto e que não haja dados inválidos ou maliciosos.
 
-- Proteja as bordas do sistema, ou seja, proteja o que entra e o que sai do sistema. Isso inclui validar os dados de entrada e saída, garantir que os dados estejam no formato correto e que não haja dados inválidos ou maliciosos.
+### Não retorne null
+
+Não retornamos `null` dentro das regras da aplicação. Pense que seu computador vai explodir ao retornar `null`. O retorno `null` quebra o fluxo do método. Se o método espera um retorno, é melhor lançar uma exceção.
+
+```java
+// Exemplo usando o Optional
+Conta conta = contaRepository.findById(idConta)
+        .orElseThrow(() -> new RespostaStatusException(HttpStatus.NOT_FOUND, "Conta não encontrada"));
+
+// O código que chama o método findById não precisa saber que o retorno pode ser nulo. Ele só vai receber a conta ou uma exceção, não sendo necessário fazer o tratamento de nulo.
+private Conta findById(Long id) {
+    return Optional.ofNullable(entityManager.find(Conta.class, id))
+            .orElseThrow(() -> new RespostaStatusException(HttpStatus.NOT_FOUND, "Conta não encontrada"));
+}
+```
+
+### Não ligamos parâmetros de borda externa com entidades
+
+Separamos as bordas externas do sistema do seu núcleo. Não conectamos diretamente os parâmetros de requisição externa com objetos de domínio, assim como não serializamos objetos de domínio para resposta da API. Essa separação ajuda a manter o núcleo do sistema desacoplado e mais seguro.
 
 
