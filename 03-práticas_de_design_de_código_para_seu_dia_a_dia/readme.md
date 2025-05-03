@@ -203,3 +203,12 @@ public class convite {
 
 
 ```
+
+### Utilize o que está pronto
+
+Usamos tudo que conhecemos e que já está pronto. Não reinventamos a roda. Isso inclui usar bibliotecas, frameworks e ferramentas que já existem e são confiáveis. Isso ajuda a economizar tempo e esforço, além de garantir que o código esteja mais seguro e testado.Menos código para manter e menos bugs para corrigir. Isso também ajuda a manter o código mais legível e fácil de entender, já que estamos usando soluções conhecidas e testadas.
+
+
+### Utilizamos cdd
+
+Utilizamos o CDD (Código de Design de Domínio) para criar um código mais legível e fácil de entender. O CDD é uma abordagem que se concentra em criar um código que seja fácil de ler e entender, mesmo para quem não conhece o domínio do problema. Isso ajuda a manter o código mais legível e fácil de entender, além de facilitar a manutenção e evolução do código.
