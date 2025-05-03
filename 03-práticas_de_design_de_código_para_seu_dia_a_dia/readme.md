@@ -275,3 +275,84 @@ public class GeraNovoConviteController {
 ```
 
 
+### Só alteramos referências que criamos
+
+
+Só alteramos referêmcia que criamos, Não mexemos nos objetos alheios. A não ser que esse objeto seja criado para isso.Eviter alterar referências de outras entidades a partir de uma entidade que não é a dona. Isso ajuda a manter o código mais legível e fácil de entender, além de evitar problemas de concorrência e inconsistência de dados.
+```java
+public class Convite {
+	@NotBlank
+	@Email
+	private String email;
+	@min(1)
+	@NotNull
+	private LocalDate dataExpiracao;
+
+	private Conta conta;
+
+	@Deprecated("usado paenas para o hibernate")
+	public Convite() {
+		//usando para api no padrão javabean
+	}
+
+	public Convite(String email, @Future localDate dataExpiracao, Conta conta) {
+		this.email = email;
+		this.dataExpiracao = dataExpiracao;
+		this.conta = conta;
+	}
+
+	//exemplo de método que altera a referência, evite usar
+	public aceitarConvite() {
+		this.conta.adicionarMembro(this.email);
+	}
+
+
+	//exemplo corrigindo o problema
+	@RestController
+public class GeraNovoConviteController {
+	private final PessoaUsuarioRepository pessoaUsuarioRepository;
+
+	private final ContaRepository contaRepository;
+
+	public GeraNovoConviteController(PessoaUsuarioRepository pessoaUsuarioRepository, ContaRepository contaRepository) {
+		this.pessoaUsuarioRepository = pessoaUsuarioRepository;
+		this.contaRepository = contaRepository;
+	}
+
+	@PostMapping("/api/contas/{idConta}/convites")
+	public void exexuta(@PathVariable Long idConta,@RequestHeader("id-pessoa-logada") , @valid @RequestBody NovoConviteRequest request) {
+		System.out.println("idConta: " + idConta);
+		System.out.println("idPessoaLogada: " + idPessoaLogada);
+		System.out.println("NovoConviteRequest: " + request);
+
+		// caregar a pessoa logada
+		pessoaLogada pessoa = pessoaUsuarioRepository.findById(idPessoaLogada)
+			.orElseThrow(() -> new RespostaStatusException(HttpStatus.NOT_FOUND, "Pessoa não encontrada"));
+
+
+		//carregar a conta
+		Conta conta = contaRepository.findById(idConta)
+			.orElseThrow(() -> new RespostaStatusException(HttpStatus.NOT_FOUND, "Conta não encontrada"));
+
+		// verificar se a pessoa logada é dona da conta, tem um metódo que verificar se a pessoa é pertece a pessoa
+		if (!conta.perteceAPessoa(pessoa)) {
+			throw new RespostaStatusException(HttpStatus.FORBIDDEN, "A pessoa logada não é dona da conta");
+		}
+
+
+		// criar o novo convite
+		Convite convite = request.toModel();
+
+		convite.aceitarConvite();
+
+		// a propria entidade que vai adicionar o membro e alterar a referência
+		conta.adicionarMembro(convite.getEmail());
+
+
+		system.out.println("Convite: " + convite);
+
+
+	}
+}
+}
+```
