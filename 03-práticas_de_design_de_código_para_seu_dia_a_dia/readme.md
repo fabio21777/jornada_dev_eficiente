@@ -156,3 +156,50 @@ public class NovoConviteRequest {
 }
 ```
 
+### Deixe pistas quando a compilação não resolver
+
+Deixamos pista que facilitem o suso do código onde não conseguimos resolver na compilação. Isso pode ser feito através de comentários, documentação ou até mesmo criando métodos que ajudem a entender o que está acontecendo. Isso ajuda a manter o código mais legível e fácil de entender para outros desenvolvedores.
+
+
+```java
+
+public class convite {
+	@NotBlank
+	@Email
+	private String email;
+	@min(1)
+	@NotNull
+	private LocalDate dataExpiracao;
+
+	private Conta conta;
+
+	@Deprecated("usado paenas para o hibernate")
+	public Convite() {
+		//usando para api no padrão javabean
+	}
+
+	/**
+	 * o java doc também é uma forma de deixar pistas
+	 *  Construtor para criar um convite
+	 *
+	 * @param email
+	 * @param dataExpiracao
+	 * @param conta
+	 *
+	 *  */
+	public Convite(String email, @Future localDate dataExpiracao, Conta conta) {
+		this.email = email;
+		this.dataExpiracao = dataExpiracao;
+		this.conta = conta;
+	}
+	public Convite(String email, int diasExpiracao, Conta conta) {
+		this.email = email;
+		this.dataExpiracao = LocalDate.now().plusDays(diasExpiracao);
+		this.conta = conta;
+	}
+
+
+}
+
+
+```
