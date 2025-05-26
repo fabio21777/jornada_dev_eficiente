@@ -30,3 +30,34 @@ A ideia dessa técnica de teste é que, a partir de uma especificação, seja po
 
 
 
+
+## Boundary Testing (Teste de Fronteira)
+
+Técnica que combina **particionamento de equivalência** com **teste de limites**.
+
+**Processo:**
+
+1. **Particione** os dados em classes equivalentes (válidas e inválidas)
+2. **Teste as fronteiras** entre essas partições
+
+**Exemplo - Campo idade (18-65):**
+
+**Partições:**
+
+- Inválida: < 18
+- Válida: 18-65
+- Inválida: > 65
+
+**Valores de fronteira testados:**
+
+- 17, 18, 19 (fronteira inferior)
+- 64, 65, 66 (fronteira superior)
+
+**Por quê funciona:**
+
+- Particionar reduz casos de teste (valores equivalentes têm mesmo comportamento)
+- Fronteiras capturam a maioria dos bugs (erros de operadores `<`, `<=`, etc.)
+
+**Resultado:** Máxima cobertura de defeitos com mínimo de casos de teste.
+
+[Boundary Testing - exemplo](boundary_testing_exemplo.md)
