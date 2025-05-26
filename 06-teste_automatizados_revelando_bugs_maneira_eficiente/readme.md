@@ -61,3 +61,9 @@ Técnica que combina **particionamento de equivalência** com **teste de limites
 **Resultado:** Máxima cobertura de defeitos com mínimo de casos de teste.
 
 [Boundary Testing - exemplo](boundary_testing_exemplo.md)
+
+## Structured Testing (Teste Estruturado)
+
+Técnica que utiliza a estrutura do código para guiar os testes. Baseia-se em identificar caminhos lógicos e condições de decisão do proprio código para derivar casos de teste. Usamos nosso fluxos como estrutras condicionais, laços e blocos de código.
+
+
