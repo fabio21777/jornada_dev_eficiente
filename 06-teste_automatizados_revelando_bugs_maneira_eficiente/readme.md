@@ -120,3 +120,8 @@ void teste1(@Forall @BigRange(min = 1, max = 99) BigDecimal minimo, // 3
 2. Número de tentativas para gerar casos
 3. Gera valores aleatórios para o mínimo entre 1 e 99
 4. Gera valores aleatórios para o máximo a partir de 101
+
+
+## Testes de unidade o mais integrados possível
+
+Uma dica é usar mocks apenas para interações externas, como classes de banco de dados, serviços externos, etc. Isso ajuda a manter os testes rápidos e focados na lógica interna do código. Dê prioridade para objetos mais próximos dos objetos reais, mesmo que seja necessário criar fakes ou stubs para simular o comportamento de dependências externas.
