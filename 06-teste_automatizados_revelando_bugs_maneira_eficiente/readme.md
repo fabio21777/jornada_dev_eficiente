@@ -66,4 +66,57 @@ Técnica que combina **particionamento de equivalência** com **teste de limites
 
 Técnica que utiliza a estrutura do código para guiar os testes. Baseia-se em identificar caminhos lógicos e condições de decisão do proprio código para derivar casos de teste. Usamos nosso fluxos como estrutras condicionais, laços e blocos de código.
 
+[Structured Testing](structured_testing.md)
 
+## Self testing code (design by contract)
+
+A técnica consiste em adicionar validações no código que garantem que ele está funcionando como esperado. Essas validações podem ser feitas através de exceções, asserts ou outras formas de validação, como anotações do Validation do Java.
+
+### Exemplo de código auto-testável
+
+```java
+private String nome;
+private String sobrenome;
+
+private void invariante() {
+    Assert.hasText(nome, "Nome não pode ser vazio");
+    Assert.hasText(sobrenome, "Sobrenome não pode ser vazio");
+}
+
+private Nome passo1(String nome, String telefone) {
+    invariante();
+    /**
+     * Restante do código
+     */
+}
+
+private Nome passo2(String sobrenome, String telefone) {
+    invariante();
+    /**
+     * Restante do código
+     */
+}
+```
+## Property Based Testing
+
+Técnica que utiliza propriedades do sistema para gerar casos de teste automaticamente. Em vez de escrever casos específicos, definimos propriedades gerais que o código deve satisfazer. Ferramentas como Jqwik ou QuickCheck geram testes baseados nessas propriedades.
+
+### Exemplo de Propriedade
+
+```java
+@Label("deveria validar proposta com valor entre x e y") // 1
+@Property(tries = 100) // 2
+void teste1(@Forall @BigRange(min = 1, max = 99) BigDecimal minimo, // 3
+            @Forall @BigRange(min = "101") BigDecimal maximo) { // 4
+
+    Proposta proposta = new Proposta("id", new BigDecimal("100"), 10);
+
+    Assertions.assertTrue(proposta.valorEntre(minimo, maximo),
+        "Proposta deve estar entre " + minimo + " e " + maximo);
+}
+```
+
+1. Rótulo para identificar o teste
+2. Número de tentativas para gerar casos
+3. Gera valores aleatórios para o mínimo entre 1 e 99
+4. Gera valores aleatórios para o máximo a partir de 101
