@@ -124,3 +124,12 @@ Não existe uma resposta única para essa escolha, pois depende do contexto e do
 > Não existe bala de prata: o ideal é combinar ambos os tipos de teste e adaptar a abordagem conforme necessário.
 
 
+## Testes devem ser simples e rápidos
+
+> Testes simples se multiplicam na base de código!
+
+Testes automatizados devem ser fáceis de entender, rápidos de executar e simples de manter. Quanto mais simples forem os testes, maior será a facilidade de evolução e manutenção da base de código ao longo do tempo.
+
+## Falácia: só testes de integração acham bugs
+
+O nível do teste não é mágico e não encontra bugs sozinho. Para revelar bugs, é fundamental criar casos de teste corretos e bem pensados, independentemente de serem testes unitários ou de integração. O que realmente faz diferença é a qualidade e a abrangência dos cenários testados.
