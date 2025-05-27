@@ -133,3 +133,7 @@ Testes automatizados devem ser fáceis de entender, rápidos de executar e simpl
 ## Falácia: só testes de integração acham bugs
 
 O nível do teste não é mágico e não encontra bugs sozinho. Para revelar bugs, é fundamental criar casos de teste corretos e bem pensados, independentemente de serem testes unitários ou de integração. O que realmente faz diferença é a qualidade e a abrangência dos cenários testados.
+
+## Dividir para conquistar
+
+Priorize testes unitários de componentes, pois são mais rápidos, fáceis de criar e de manter. Quanto mais testes, maiores as chances de encontrar casos que revelem bugs. Nem sempre é viável, em termos de custo computacional e tempo, criar testes de integração para tudo. Normalmente, criar testes unitários mokando os componentes que não estão sendo testado é um trade-off positivo
