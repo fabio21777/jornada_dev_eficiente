@@ -139,12 +139,48 @@ O nível do teste não é mágico e não encontra bugs sozinho. Para revelar bug
 Priorize testes unitários de componentes, pois são mais rápidos, fáceis de criar e de manter. Quanto mais testes, maiores as chances de encontrar casos que revelem bugs. Nem sempre é viável, em termos de custo computacional e tempo, criar testes de integração para tudo. Normalmente, criar testes unitários mokando os componentes que não estão sendo testado é um trade-off positivo.
 
 
-## Foque nos caso de uso
+## Foque nos casos de uso
 
-Os casos de uso devem ser facil de ser testados.
+Os casos de uso devem ser fáceis de testar. Estruture o código e os testes para que seja simples validar o comportamento esperado de cada caso de uso.
 
+---
 
+## Como criar testes fáceis
 
-## Como criar testes faceis
+1. Crie uma infraestrutura de testes, APIs, bibliotecas, etc., que facilite a criação e manutenção dos testes.
+2. Padronize a escrita dos testes para que todos sigam uma estrutura semelhante, tornando-os mais compreensíveis e fáceis de manter.
 
-1. criar um infraestrutura de testes, apis, bibliotecas, etc. que facilite a criação de testes.
+---
+
+## É preciso ver valor em todo tipo de teste
+
+É importante reconhecer o valor de todos os tipos de teste, independentemente do nível (unitário, integração, sistema, aceitação). Cada tipo de teste contribui para a qualidade do software e pode revelar diferentes tipos de problemas.
+
+---
+
+## Por que mockar, eis a questão
+
+Mockar é uma técnica que permite simular o comportamento de objetos ou componentes externos, facilitando a criação de testes unitários.
+
+### Quando usar mocks
+
+Utilize mocks para componentes que dificultam a criação de testes, como por exemplo:
+
+- Acesso a banco de dados
+- Chamadas a APIs externas
+- Interações com sistemas externos
+
+### Quando não usar mocks
+
+Evite mocks quando o objetivo do teste é validar a funcionalidade principal do caso de uso, como por exemplo:
+
+- Verificar se uma query retorna as informações corretas
+- Garantir que um objeto está sendo persistido corretamente no banco de dados
+- Validar se o endpoint está retornando o status correto
+
+Também não é recomendado mockar entidades que representam o domínio do sistema, como por exemplo:
+
+- DTOs
+- Entidades
+- Classes de domínio em geral
+- Métodos utilitários que não dependem de sistemas externos
