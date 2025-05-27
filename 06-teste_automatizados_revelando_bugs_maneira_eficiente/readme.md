@@ -125,3 +125,7 @@ void teste1(@Forall @BigRange(min = 1, max = 99) BigDecimal minimo, // 3
 ## Testes de unidade o mais integrados possível
 
 Uma dica é usar mocks apenas para interações externas, como classes de banco de dados, serviços externos, etc. Isso ajuda a manter os testes rápidos e focados na lógica interna do código. Dê prioridade para objetos mais próximos dos objetos reais, mesmo que seja necessário criar fakes ou stubs para simular o comportamento de dependências externas.
+
+## Teste na jornada
+
+Durante a Jornada Dev Eficiente, a estratégia adotada para testes será o teste de unidade com Structured Testing, utilizando a técnica MC/DC (Modified Condition/Decision Coverage) e Boundary Testing. A base será o teste unitário, instanciando objetos reais, mas utilizando mocks apenas para interações externas. Para controladores que não possuem branches, utilizaremos testes de integração, normalmente aplicando técnicas como Specification Based Testing e Property Based Testing.
