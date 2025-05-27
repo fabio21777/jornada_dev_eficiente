@@ -83,3 +83,15 @@ As fronteiras são os limites entre as condições válidas e inválidas. Bugs t
 ### Observação
 
 Essas técnicas podem ser usadas de forma estruturada com código já pronto ou apenas com base no requisito.
+
+
+## Cobertura de Testes
+
+A cobertura de testes, por si só, não garante que o código esteja bem testado ou que os testes sejam eficazes na detecção de bugs. Ela é apenas uma métrica que pode indicar que mais testes podem ser necessários, mas não assegura a qualidade dos testes realizados.
+
+> Ter alta cobertura de testes não é um problema; o problema é ter baixa cobertura de testes.
+
+**Nota:**
+Cobertura de testes mede apenas o quanto do código foi exercitado pelos testes, mas não avalia se os cenários mais críticos e as fronteiras foram realmente testados. É fundamental focar em criar testes que revelem bugs e validem o comportamento esperado, especialmente nos pontos de maior risco e complexidade do sistema.
+
+![Cobertura de Testes](image-1.png)
