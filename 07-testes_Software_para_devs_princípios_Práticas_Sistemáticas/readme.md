@@ -184,3 +184,8 @@ Também não é recomendado mockar entidades que representam o domínio do siste
 - Entidades
 - Classes de domínio em geral
 - Métodos utilitários que não dependem de sistemas externos
+
+### Internal ou peer, uma ótima maneira de classificar dependências
+
+1. **Internal**: Dependências internas são aquelas que pertencem à mesma funcionalidade, sendo componentes separados apenas para facilitar a manutenção e evolução do código. Por serem parte fundamental do que deve ser testado, essas dependências não devem ser mockadas.
+2. **Peer**: Dependências peer são aquelas que pertencem a funcionalidades diferentes, mas que interagem entre si. Essas dependências normalmente podem ser mockadas. Um exemplo comum são os repositórios
