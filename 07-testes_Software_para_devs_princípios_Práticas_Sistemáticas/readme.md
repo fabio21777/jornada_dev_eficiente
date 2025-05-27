@@ -95,3 +95,32 @@ A cobertura de testes, por si só, não garante que o código esteja bem testado
 Cobertura de testes mede apenas o quanto do código foi exercitado pelos testes, mas não avalia se os cenários mais críticos e as fronteiras foram realmente testados. É fundamental focar em criar testes que revelem bugs e validem o comportamento esperado, especialmente nos pontos de maior risco e complexidade do sistema.
 
 ![Cobertura de Testes](image-1.png)
+
+
+## Teste de unidade ou teste de integração?
+
+### Teste de unidade
+
+**Vantagens:**
+1. Foca em testar pequenas partes do código (funções, métodos, classes).
+2. É rápido e fácil de escrever.
+3. Facilita a identificação de bugs em partes específicas do código.
+
+**Desvantagens:**
+1. Pode não cobrir interações entre diferentes partes do sistema.
+
+### Teste de integração
+
+**Vantagens:**
+1. Testa a interação entre diferentes componentes do sistema.
+2. Identifica problemas de integração que podem não ser visíveis em testes unitários.
+3. Garante que os componentes funcionem juntos como esperado.
+
+**Desvantagens:**
+1. Pode ser mais lento e complexo de escrever.
+
+Não existe uma resposta única para essa escolha, pois depende do contexto e dos objetivos do teste. Por exemplo, um endpoint simples que apenas persiste um objeto no banco de dados pode mascarar bugs se todas as interações forem mockadas, já que certos problemas só aparecem ao acessar o banco real. Por outro lado, um algoritmo que faz cálculos complexos pode ser testado de forma mais eficaz com testes unitários, sem a necessidade de acessar o banco de dados.
+
+> Não existe bala de prata: o ideal é combinar ambos os tipos de teste e adaptar a abordagem conforme necessário.
+
+
