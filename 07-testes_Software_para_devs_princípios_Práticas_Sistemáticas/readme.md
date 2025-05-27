@@ -145,4 +145,6 @@ Os casos de uso devem ser facil de ser testados.
 
 
 
+## Como criar testes faceis
 
+1. criar um infraestrutura de testes, apis, bibliotecas, etc. que facilite a criação de testes.
