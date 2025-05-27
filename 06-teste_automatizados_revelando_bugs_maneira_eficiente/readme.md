@@ -129,3 +129,6 @@ Uma dica é usar mocks apenas para interações externas, como classes de banco 
 ## Teste na jornada
 
 Durante a Jornada Dev Eficiente, a estratégia adotada para testes será o teste de unidade com Structured Testing, utilizando a técnica MC/DC (Modified Condition/Decision Coverage) e Boundary Testing. A base será o teste unitário, instanciando objetos reais, mas utilizando mocks apenas para interações externas. Para controladores que não possuem branches, utilizaremos testes de integração, normalmente aplicando técnicas como Specification Based Testing e Property Based Testing.
+
+
+## [playbook-testes-automatizados-jornada-4.md](playbook-testes-automatizados-jornada-4.md)
