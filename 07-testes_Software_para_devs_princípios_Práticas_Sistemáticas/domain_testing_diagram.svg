@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .box {
+        fill: #f0f0f0;
+        stroke: #333;
+        stroke-width: 2;
+        rx: 5;
+      }
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        fill: #333;
+      }
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-anchor: start;
+        fill: #333;
+      }
+      .arrow {
+        stroke: #333;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="20" y="40" class="title">Testes baseado em especificação (domain testing)</text>
+  
+  <!-- Box 1: Olhe para cada entrada de maneira separada -->
+  <rect x="50" y="80" width="120" height="80" class="box"/>
+  <text x="110" y="105" class="text">Olhe para cada</text>
+  <text x="110" y="125" class="text">entrada de</text>
+  <text x="110" y="145" class="text">maneira separada</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="170" y1="120" x2="210" y2="120" class="arrow"/>
+  
+  <!-- Box 2: Olhe para como as elas interagem -->
+  <rect x="220" y="80" width="120" height="80" class="box"/>
+  <text x="280" y="105" class="text">Olhe para como as</text>
+  <text x="280" y="125" class="text">elas interagem</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="340" y1="120" x2="380" y2="120" class="arrow"/>
+  
+  <!-- Box 3: Regras de domínio -->
+  <rect x="390" y="80" width="120" height="80" class="box"/>
+  <text x="450" y="105" class="text">Regras de domínio</text>
+  
+  <!-- Arrow 3 -->
+  <line x1="510" y1="120" x2="550" y2="120" class="arrow"/>
+  
+  <!-- Box 4: Saídas esperadas -->
+  <rect x="560" y="80" width="120" height="80" class="box"/>
+  <text x="620" y="105" class="text">Saídas esperadas</text>
+  
+  <!-- Arrow down -->
+  <line x1="620" y1="160" x2="620" y2="200" class="arrow"/>
+  
+  <!-- Box 5: Simplifica -->
+  <rect x="560" y="210" width="120" height="80" class="box"/>
+  <text x="620" y="250" class="text">Simplifica</text>
+  
+  <!-- Arrow left -->
+  <line x1="560" y1="250" x2="390" y2="250" class="arrow"/>
+  
+  <!-- Box 6: Crie testes -->
+  <rect x="270" y="210" width="120" height="80" class="box"/>
+  <text x="330" y="250" class="text">Crie testes</text>
+</svg>
