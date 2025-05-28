@@ -38,3 +38,12 @@ Testes sem asserção devem ser evitados, pois não validam o comportamento espe
 Todas essas dicas são situacionais e devem ser adaptadas conforme o contexto do projeto e da equipe envolvida. O importante é manter um equilíbrio entre a cobertura de testes, a facilidade de manutenção e a evolução do código.
 
 
+## Testes estúpidos são bons
+
+
+Testes estúpidos são aqueles que validam o comportamento esperado de forma simples e direta, sem complicações desnecessárias. Eles são bons porque:
+
+1. **Fáceis de entender:** Testes simples são mais fáceis de ler e compreender, tanto para quem escreve quanto para quem mantém o código.
+2. **Rápidos de executar:** Testes simples geralmente são mais rápidos, o que permite uma execução mais frequente e feedback mais rápido sobre o estado
+3. **Menos propensos a falhas:** Testes simples têm menos chances de falhar devido a complexidades desnecessárias, tornando-os mais confiáveis.
+
