@@ -116,3 +116,23 @@ public class PhoneNumber {
 
 Ao encapsular regras e validações dentro de uma classe específica, você torna o código mais expressivo, seguro e fácil de manter, além de evitar a propagação de lógica de validação por todo o sistema.
 
+### Value objects
+
+Objeto de valor são informaçẽes que podem ser criadas e manipuladas como objetos, com atributos e métodos que seja concisos e claros, evitando a necessidade de passar dados entre várias classes ou métodos. Eles são usados para representar conceitos do domínio de forma mais rica e expressiva.
+
+### Tiny objects
+
+Tiny objects são objetos pequenos e simples que encapsulam um único valor ou conceito, como um número de telefone, um endereço de e-mail ou uma data. Eles são usados para evitar o uso de tipos primitivos ou wrappers diretamente, proporcionando uma melhor abstração e encapsulamento.
+
+
+## Heurica  Polimorfismo para postergar decisões ou expressar incertezas no código
+
+Para postergar decisões ou expressar incertezas no código, você pode usar o polimorfismo para criar uma interface que criar define um contrato para diferentes implementações. Isso permite que você adie a decisão de qual implementação usar até o momento em que for realmente necessário, tornando o código mais flexível e extensível. Como por exemplo enviar uma notificação via sqs
+
+## Heurística: Até coleções podem ganhar suas próprias abstrações
+
+Vocẽ pode criar wrappers ou abstrações para coleções, como listas ou mapas, para encapsular a lógica de manipulação e validação dos dados. Isso ajuda a manter o código mais organizado e coeso, além de facilitar a manutenção e a evolução do sistema.
+
+## Heurística:  Identificando oportunidades de aplicação de funções aplicar template method
+
+O padrão Template Method é uma abordagem que permite definir o esqueleto de um algoritmo em uma classe base, enquanto as subclasses podem fornecer implementações específicas para alguns passos do algoritmo. Isso é útil quando você tem um processo comum, mas com variações em algumas etapas.
