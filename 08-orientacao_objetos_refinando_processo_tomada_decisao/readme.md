@@ -81,3 +81,38 @@ public class User {
 	}
 }
 ```
+
+
+## Heurística: Quando o tipo padrão não é mais suficiente
+
+Esse é um cenário em que o tipo primitivo ou wrapper não é mais suficiente para representar o domínio do problema. Nesses casos, é necessário criar uma classe específica para encapsular a lógica e as regras de negócio relacionadas ao tipo. Por exemplo, uma classe `PhoneNumber` para representar números de telefone, em vez de usar apenas uma `String`.
+
+```java
+public class PhoneNumber {
+    private String number;
+    private CountryCode countryCode;
+    private Format format;
+
+    public PhoneNumber(String number, CountryCode countryCode, Format format) {
+        this.number = number;
+        this.countryCode = countryCode;
+        this.format = format;
+        validate();
+    }
+
+    private void validate() {
+        if (number == null || number.isBlank()) {
+            throw new IllegalArgumentException("Número não pode ser vazio");
+        }
+        if (countryCode == null) {
+            throw new IllegalArgumentException("Código do país é obrigatório");
+        }
+        // Adicione outras validações conforme necessário
+    }
+
+    // Métodos de negócio relacionados ao telefone podem ser adicionados aqui
+}
+```
+
+Ao encapsular regras e validações dentro de uma classe específica, você torna o código mais expressivo, seguro e fácil de manter, além de evitar a propagação de lógica de validação por todo o sistema.
+
