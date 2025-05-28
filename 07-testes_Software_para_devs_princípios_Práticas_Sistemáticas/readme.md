@@ -159,3 +159,5 @@ Os casos de uso devem ser fáceis de testar. Estruture o código e os testes par
 ---
 
 ## [Por que mockar, eis a questão](mockar.md)
+
+## [Design para Testes](design_para_testes.md)
