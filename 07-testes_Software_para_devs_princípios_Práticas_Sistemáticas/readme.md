@@ -164,3 +164,5 @@ Os casos de uso devem ser fáceis de testar. Estruture o código e os testes par
 
 
 ## [Qualidade de código de testes](qualidade_de_codigo_de_testes.md)
+
+## [Topicos Extras](topicos_extras.md)

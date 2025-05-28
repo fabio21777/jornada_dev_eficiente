@@ -46,4 +46,3 @@ Testes estúpidos são aqueles que validam o comportamento esperado de forma sim
 1. **Fáceis de entender:** Testes simples são mais fáceis de ler e compreender, tanto para quem escreve quanto para quem mantém o código.
 2. **Rápidos de executar:** Testes simples geralmente são mais rápidos, o que permite uma execução mais frequente e feedback mais rápido sobre o estado
 3. **Menos propensos a falhas:** Testes simples têm menos chances de falhar devido a complexidades desnecessárias, tornando-os mais confiáveis.
-
