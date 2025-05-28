@@ -26,3 +26,15 @@
 ## Testes sem asserção
 
 Testes sem asserção devem ser evitados, pois não validam o comportamento esperado do código.
+
+
+## Testes podem dificultar a refatoração?
+
+É uma realidade que testes podem dificultar a refatoração, especialmente os testes unitários muito acoplados a implementações via mocks. No entanto, é possível contornar esse problema seguindo algumas práticas:
+
+1. Escreva métodos auxiliares e invista em infraestrutura de testes para facilitar ajustes em caso de mudanças frequentes, principalmente quando a infraestrutura é usada por vários testes.
+2. Se houver muitas mudanças e isso estiver consumindo muito tempo, aumente a granularidade dos testes, escrevendo testes mais abrangentes que cubram mais casos de uso de uma só vez.
+
+Todas essas dicas são situacionais e devem ser adaptadas conforme o contexto do projeto e da equipe envolvida. O importante é manter um equilíbrio entre a cobertura de testes, a facilidade de manutenção e a evolução do código.
+
+
