@@ -19,3 +19,10 @@ A arquitetura hexagonal, também conhecida como "Ports and Adapters", é um padr
 Os métodos de teste devem ser projetados para facilitar a observação do comportamento do sistema e a identificação de problemas. Isso facilita a depuração e a manutenção do código, além de permitir que os testes sejam mais eficazes na detecção de bugs.
 
 > Um sinal de que o código pode não ser bem observável ou controlável é quando os asserts verificam apenas se o valor é diferente de `null`. Prefira asserts que validem o comportamento e os resultados esperados de forma mais precisa.
+
+## Na dúvida, escreva classes pequenas
+
+
+a philosofhy of software design, uma das afirmações é que classes maiores são preferíveis a classes pequenas, nele tambem se cunha o termo "classites", que são classes pequenas demais.
+
+No entanto, apesar de ser uma afirmação polêmica, é importante considerar que classes pequenas podem ser mais fáceis de testar e manter. Classes menores tendem a ter menos responsabilidades e são mais faceis de entender e testar.
