@@ -22,7 +22,6 @@ Os métodos de teste devem ser projetados para facilitar a observação do compo
 
 ## Na dúvida, escreva classes pequenas
 
+> Em "A Philosophy of Software Design", uma das afirmações é que classes maiores são preferíveis a classes pequenas, e o autor cunha o termo "classitis" para se referir ao excesso de classes pequenas demais.
 
-a philosofhy of software design, uma das afirmações é que classes maiores são preferíveis a classes pequenas, nele tambem se cunha o termo "classites", que são classes pequenas demais.
-
-No entanto, apesar de ser uma afirmação polêmica, é importante considerar que classes pequenas podem ser mais fáceis de testar e manter. Classes menores tendem a ter menos responsabilidades e são mais faceis de entender e testar.
+No entanto, apesar de ser uma afirmação polêmica, é importante considerar que classes pequenas podem ser mais fáceis de testar e manter. Classes menores tendem a ter menos responsabilidades e são mais fáceis de entender e testar.
