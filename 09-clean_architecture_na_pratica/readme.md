@@ -67,3 +67,15 @@ esse código demonstra como a classe `UserService` depende de uma abstração `c
 ## Evite classes anêmicas
 
 Evite criar classes anêmicas, que são classes que possuem pouca ou nenhuma lógica de negócio, apenas lógica de atribuição ou getters/setters. Sempre que possível, encapsule a lógica de negócio dentro da própria classe. Isso torna o código mais coeso, seguro e fácil de manter.
+
+## Diferença entre Clean Architecture e arquitetura Hexagonal
+
+Arquitetura hexagonal é um outro estilo que busca os mesmos objetivos declarados pela Clean Architecture. Na verdade, no próprio texto original de Bob Martin, ele cita a Arquitetura Hexagonal como uma das inspirações.
+
+> Enquanto a Clean Architecture tenta explicita as camadas e suas dependências, a Arquitetura Hexagonal foca na separação entre o núcleo do sistema e as interfaces externas, permitindo que o núcleo seja testado de forma isolada. mas o coinceito de separação de preocupações e a independência de frameworks e interfaces são comuns a ambas.
+
+![alt text](image-1.png)
+
+## Relacionando arquitetura em camadas e DDD
+
+Domain Driven Design também define princípios que influenciam tanto na escrita do código do dia a dia quanto a arquitetura que vai ser proposta para o software. Provavelmente é um dos livros mais densos que temos no mercado e cheio de boas ideias.
