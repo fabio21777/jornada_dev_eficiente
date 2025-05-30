@@ -13,3 +13,13 @@ Estudar o contexto e avaliar para identificar os termos e regras do negócio é 
 ![alt text](image.png)
 
 Ser proativo e perguntar para as pessoas que já atuam no domínio quais são as referências, termos e regras do negócio é uma prática recomendada. Procure saber também quais são as formas de propagação do conhecimento e se existe alguma documentação niveladora.
+
+## A relação entre especialistas de domínio e em tecnologia
+
+Tente ser o mais proximo possível dos especialistas de domínio. Isso não significa que você precisa se tornar um especialista no domínio, mas sim que deve ter uma compreensão suficiente para colaborar efetivamente com eles. A comunicação entre desenvolvedores e especialistas de domínio é crucial para o sucesso do projeto.
+
+
+## Linguagem Ubíqua
+
+A linguagem ubíqua é um conceito central no DDD, que busca criar uma linguagem comum entre desenvolvedores e especialistas de domínio. Essa linguagem deve ser usada em todo o projeto, desde o código até a documentação, para garantir que todos estejam na mesma página.
+
