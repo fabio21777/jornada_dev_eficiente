@@ -23,3 +23,16 @@ Tente ser o mais proximo possível dos especialistas de domínio. Isso não sign
 
 A linguagem ubíqua é um conceito central no DDD, que busca criar uma linguagem comum entre desenvolvedores e especialistas de domínio. Essa linguagem deve ser usada em todo o projeto, desde o código até a documentação, para garantir que todos estejam na mesma página.
 
+## A influência da linguagem ubíqua na escrita do código
+
+Não existe errado ou certo na escrita do código, mas é importante que a linguagem utilizada seja consistente e reflita o domínio do negócio e que seja combinada com a linguagem ubíqua
+
+## Introdução a contextos delimitados
+
+Contextos delimitados são uma forma de dividir o sistema em partes menores e mais gerenciáveis, cada uma com seu próprio modelo de domínio. Isso permite que diferentes equipes trabalhem em diferentes partes do sistema.
+
+### Definindo o problema e seus possíveis subproblemas
+
+1. **é possivel dividir o problema em subproblemas?** Sim, é possível dividir o problema em subproblemas, o que facilita a compreensão e a resolução de cada parte do sistema. cada item desse é um contexto delimitado.
+2. **é possível dividir o problema em subproblemas que podem ser resolvidos de forma independente?** Sim, é possível dividir o problema em subproblemas que podem ser resolvidos de forma independente, o que permite que diferentes equipes trabalhem em diferentes partes do sistema sem interferir umas nas outras.
+3. **Os contextos podem e devem ser evoluidos?** Sim, os contextos podem e devem ser evoluídos ao longo do tempo, à medida que o sistema cresce e as necessidades do negócio mudam. Isso permite que o sistema se adapte às novas demandas e continue a atender às necessidades do negócio.
