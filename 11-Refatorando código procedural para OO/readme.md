@@ -5,3 +5,7 @@
 ## [Refatorando classe `TaxCalculator`](TaxCalculator.md)
 
 ## [Refatorando classe `InvoiceGenerator`](InvoiceGenerator.md)
+
+## [Refatorando classe `PaymentProcessor`](PaymentProcessor.md)
+
+## [Refatorando classe `Puzzle`](Puzzle.md)
