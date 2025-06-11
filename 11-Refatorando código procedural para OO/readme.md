@@ -3,3 +3,5 @@
 ## [Refatorando classe  `DiscountApplier`](DiscountApplier.md)
 
 ## [Refatorando classe `TaxCalculator`](TaxCalculator.md)
+
+## [Refatorando classe `InvoiceGenerator`](InvoiceGenerator.md)
