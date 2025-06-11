@@ -113,3 +113,42 @@ public class Main {
 1. Evite criar interfaces sem necessidade. como por exemplo `Discount` será aplicada apenas uma vez para todas implementações.
 2. Utilize o padrão de projeto Strategy para aplicar diferentes lógicas de desconto. Isso permite que você adicione novos tipos de desconto sem modificar o código existente.
 3. Evite uso de classes muito com nomes muito concretos, como `DiscountPerProductBasket` para classes que podem ser reutilizadas em diferentes contextos. Use nomes mais genéricos, como `DiscountPerProduct`, para facilitar a reutilização e a manutenção do código.
+
+### class basket
+
+1. A classe `Basket` tem o metodo `subtract`, que altera o estado do objeto diretamente. podemos mudar para um nome mais sugestivo como applyDiscountByPercentage em que o calculo do desconto é feito dentro do método, alem disso adicionaremos uma validação (contract by design) para garantir que o valor do desconto esteja entre 0 e 1 (ou seja, 0% a 100%), oque fazemos dentro do if com  apenas aplicar zero ou lançar uma exceção caso o valor seja inválido, é uma regra de negocio então as duas soluções são válidas.
+
+> Sempre use o javadoc e similares sempre que possivel é uma boa prática para documentar o código e facilitar a compreensão por outros desenvolvedores.
+
+```java
+
+public class Basket {
+
+    private double amount;
+    private List<Item> items;
+
+    public Basket(List<Item> itemss) {
+        this.items = itemss;
+        sumItems();
+    }
+
+	....
+
+    /**
+     * Aplica desconto baseado em porcentagem.
+     * Se a porcentagem de desconto for invalida, nenhum desconto é aplicado.
+     *
+     * @param discountPercentage porcentagem, [0.0, 1.0]
+     */
+    public void applyDiscountByPercentage(double discountPercentage) {
+        if(discountPercentage < 0 || discountPercentage > 1) {
+            //throw new IllegalArgumentException("Invalid discount percentage");
+            return;
+        }
+
+        this.amount -= this.amount * discountPercentage;
+    }
+
+	....
+
+}
