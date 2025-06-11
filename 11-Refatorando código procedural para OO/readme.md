@@ -152,3 +152,44 @@ public class Basket {
 	....
 
 }
+```
+
+### Fabrica e dependências do tipo peeer produto
+
+1. Evite aclopar a logica do tipo perr como banco de dados chamadas api, leituras de arquvis, etc. da logica de regras de classses. Isso facilita a manutenção e a reutilização e testes da classe, para isso normalmente usamos o padrão de projeto Factory que é nossa class suja que saber mais sobre  o baixo nivel é passa os dados necessários para a classe de regras de negocio.
+
+```java
+
+public class DiscountApplierFactory {
+
+	private DiscountRepository repository;
+
+	public DiscountApplierFactory(DiscountRepository repository) {
+		this.repository = repository;
+	}
+
+	public DiscountApplier build() {
+
+		List<DiscountStrategy> discounts = new ArrayList<>();
+
+		List<DiscountProduct> allDiscountsPerProduct = repository.getAllDiscountsPerProduct();
+
+		for (DiscountProduct discountProduct : allDiscountsPerProduct) {
+			discounts.add(new DiscountPerProduct(discountProduct.getProducts(), discountProduct.getDiscount()));
+		}
+
+		List<DiscountAmount> allDiscountsPerAmount = repository.getAllDiscountsPerAmount();
+
+		for (DiscountAmount discountAmount : allDiscountsPerAmount) {
+			discounts.add(new DiscountPerAmount(discountAmount.getMinAmount(), discountAmount.getMaxAmount(),
+					discountAmount.getMinItems(), discountAmount.getMaxItems(), discountAmount.getDiscount()));
+		}
+
+		return new DiscountApplier(discounts);
+	}
+}
+```
+
+No exemplo acima, a classe `DiscountApplierFactory` é responsável por criar uma instância de `DiscountApplier` com todas as regras de desconto necessárias. Ela busca as regras de desconto em um repositório (que pode ser um banco de dados, arquivo, etc.) e cria as instâncias de `DiscountPerProduct` e `DiscountPerAmount` conforme necessário.
+
+
