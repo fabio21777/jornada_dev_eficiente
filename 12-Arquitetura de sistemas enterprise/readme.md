@@ -54,11 +54,51 @@ desvantagens:
 
 ## Three Interaction Modes
 
-
-> Lei de conway
->1. **Organizações que projetam sistemas são limitadas a projetar sistemas que >refletem suas estruturas de comunicação**.
-
+> **Lei de Conway:**
+> Organizações que projetam sistemas são limitadas a projetar sistemas que refletem suas estruturas de comunicação.
 
 ## Papéis e responsabilidades
 
+(Descreva aqui os principais papéis e responsabilidades dos times e profissionais envolvidos na arquitetura de sistemas enterprise.)
 
+## Infraestrutura e plataformas
+
+### Cloud native e self-service
+
+1. **Cloud native:** Aplicações projetadas para serem executadas na nuvem, aproveitando recursos de escalabilidade, resiliência e flexibilidade.
+2. **Dimensionamento horizontal:** Capacidade de adicionar mais instâncias para lidar com aumento de carga.
+3. **Independência de local:** Aplicações que podem ser executadas em qualquer ambiente de nuvem.
+4. **Efêmera:** Instâncias podem ser criadas e destruídas rapidamente, sem dependência de estado local.
+5. **Replicável:** Facilidade para replicar ambientes e aplicações.
+6. **Uso das APIs da nuvem:** Integração nativa com os serviços oferecidos pela nuvem.
+7. **Multi-nuvem:** Capacidade de operar em diferentes provedores de nuvem (cloud agnostic), utilizando ferramentas e APIs de cada nuvem.
+8. **Times de plataforma:** Times que criam e mantêm plataformas de desenvolvimento, oferecendo serviços e ferramentas para outras equipes.
+
+## Qualidade
+
+1. **Reúso de código:**
+   - Normalmente é muito difícil reutilizar código entre sistemas diferentes, especialmente em sistemas distribuídos.
+   - Pode haver repetição de bugs.
+   - Compartilhar demais significa muito acoplamento.
+
+2. **Dívida técnica:**
+   - Todos os sistemas têm dívida técnica, que é o custo de manter e evoluir o código existente.
+   - Pode atrasar o desenvolvimento no longo prazo.
+   - Modularização ruim.
+   - Testes ruins.
+   - Falta de documentação.
+   - Falta de propriedade do código.
+   - Uso de tecnologia desatualizada ou interna.
+
+3. **Evite refatoração big bang:**
+   - Refatoração big bang é uma abordagem onde todo o código é reescrito de uma só vez, o que pode ser arriscado e difícil de gerenciar.
+   - É melhor fazer refatorações incrementais, melhorando pequenas partes do código ao longo do tempo.
+
+4. **Lute contra a dívida técnica:**
+   - É importante combater a dívida técnica, priorizando melhorias contínuas no código e na arquitetura.
+   - Isso envolve refatoração constante, testes automatizados e documentação adequada.
+
+5. **Testes:**
+   - **Fast tests:** Testes rápidos que verificam a funcionalidade básica do sistema.
+   - **Integration tests:** Testes que verificam a integração entre diferentes componentes do sistema.
+   - **Manual tests:** Testes manuais realizados por desenvolvedores ou testadores para verificar a funcionalidade do sistema.
