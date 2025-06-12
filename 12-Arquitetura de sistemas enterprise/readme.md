@@ -102,3 +102,7 @@ desvantagens:
    - **Fast tests:** Testes rápidos que verificam a funcionalidade básica do sistema.
    - **Integration tests:** Testes que verificam a integração entre diferentes componentes do sistema.
    - **Manual tests:** Testes manuais realizados por desenvolvedores ou testadores para verificar a funcionalidade do sistema.
+
+### Fontes livros
+
+![alt text](image.png)
